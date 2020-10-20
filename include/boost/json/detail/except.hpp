@@ -27,6 +27,7 @@ namespace detail {
 #if ! defined(BOOST_JSON_STANDALONE) && defined(BOOST_CURRENT_LOCATION)
 using source_location = boost::source_location;
 #else
+# undef  BOOST_CURRENT_LOCATION
 # define BOOST_CURRENT_LOCATION {}
 struct source_location{};
 #endif
